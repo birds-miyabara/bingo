@@ -5,6 +5,7 @@ body {
   background-size: cover;
   color: #fff;
   text-align: center;
+  min-width: 800px;
 }
 
 h1, h2 {
