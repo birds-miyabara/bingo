@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>同窓会ビンゴ抽選</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="setup-screen">
+    <h1>抽選単語リスト入力</h1>
+    <input type="file" id="file-input" accept=".txt" onchange="loadFromFile()" />
+    <div id="word-list"></div>
+    <button onclick="addWord()">単語を追加</button>
+    <button onclick="startDraw()">抽選開始</button>
+  </div>
+
+  <div id="draw-screen" style="display: none;">
+    <h1>🎰 ビンゴ抽選 🎰</h1>
+    <div class="draw-layout">
+      <div class="word-column">
+        <h2>抽選待ち</h2>
+        <ul id="remaining-list"></ul>
+      </div>
+      <div class="slot-center">
+        <div id="slot-display">---</div>
+        <button onclick="drawWord()">抽選</button>
+      </div>
+      <div class="word-column">
+        <h2>抽選済み</h2>
+        <ul id="drawn-list"></ul>
+      </div>
+    </div>
+  </div>
+
+  <audio id="spin-sound" src="スロットマシーンの回転.mp3"></audio>
+  <audio id="ding-sound" src="レアアイテムゲット.mp3"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
