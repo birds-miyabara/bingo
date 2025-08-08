@@ -9,10 +9,15 @@
 <body>
   <div id="setup-screen">
     <h1>抽選単語リスト入力</h1>
-    <input type="file" id="file-input" accept=".txt" onchange="loadFromFile()" />
     <div id="word-list"></div>
-    <button onclick="addWord()">単語を追加</button>
-    <button onclick="startDraw()">抽選開始</button>
+    <div class="button-group">
+      <label class="styled-button">
+        ファイルから読み込む
+        <input type="file" id="file-input" accept=".txt" onchange="loadFromFile()" hidden />
+      </label>
+      <button onclick="addWord()">単語を追加</button>
+      <button onclick="startDraw()">抽選開始</button>
+    </div>
   </div>
 
   <div id="draw-screen" style="display: none;">

@@ -24,8 +24,15 @@ h1, h2 {
   padding: 5px;
 }
 
-button {
-  margin: 10px;
+.button-group {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+button, .styled-button {
   padding: 10px 20px;
   font-size: 1em;
   cursor: pointer;
@@ -35,6 +42,22 @@ button {
   color: #000;
   font-weight: bold;
   box-shadow: 2px 2px 5px #333;
+  text-align: center;
+}
+
+.styled-button {
+  display: inline-block;
+  position: relative;
+}
+
+.styled-button input[type="file"] {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
 }
 
 .draw-layout {
@@ -54,6 +77,7 @@ button {
 .word-column ul {
   list-style: none;
   padding: 0;
+  font-size: 1.5em;
 }
 
 .slot-center {
